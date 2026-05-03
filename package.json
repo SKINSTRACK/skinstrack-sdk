@@ -1,5 +1,5 @@
 {
-  "name": "skinstrack-sdk",
+  "name": "skinstrack",
   "version": "1.0.0",
   "description": "Official TypeScript SDK for skinstrack.com CS2 Skins Price API",
   "author": "skinstrack.com",
