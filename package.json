@@ -1,0 +1,77 @@
+{
+  "name": "skinstrack-sdk",
+  "version": "1.0.0",
+  "description": "Official TypeScript SDK for skinstrack.com CS2 Skins Price API",
+  "author": "skinstrack.com",
+  "license": "MIT",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.cts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
+    },
+    "./v1": {
+      "import": {
+        "types": "./dist/v1/index.d.ts",
+        "default": "./dist/v1/index.js"
+      },
+      "require": {
+        "types": "./dist/v1/index.d.cts",
+        "default": "./dist/v1/index.cjs"
+      }
+    },
+    "./v2": {
+      "import": {
+        "types": "./dist/v2/index.d.ts",
+        "default": "./dist/v2/index.js"
+      },
+      "require": {
+        "types": "./dist/v2/index.d.cts",
+        "default": "./dist/v2/index.cjs"
+      }
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup && node scripts/copy-dcts.js",
+    "dev": "tsup --watch",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "npm run build"
+  },
+  "devDependencies": {
+    "tsup": "^8.0.0",
+    "typescript": "^5.4.0"
+  },
+  "keywords": [
+    "cs2",
+    "csgo",
+    "counter-strike",
+    "skins",
+    "api",
+    "skinstrack",
+    "steam",
+    "trading",
+    "marketplace",
+    "csfloat",
+    "buff163",
+    "prices"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/skinstrack/skinstrack-sdk"
+  },
+  "bugs": {
+    "url": "https://github.com/skinstrack/skinstrack-sdk/issues"
+  },
+  "homepage": "https://skinstrack.com/api-docs"
+}
