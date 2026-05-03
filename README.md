@@ -92,6 +92,8 @@ interface ClientConfig {
 | `getStatus()` | Check API status | None |
 | `search(query)` | Search items by name (up to 8 results) | API Key |
 | `getSteamInventory(steamId, options?)` | Get Steam inventory with prices | Paid |
+| `getItem(itemName)` | Get detailed information and prices for a specific item |
+| `getItems(options?)` | Get a list of items with their prices from specified providers |
 | `getAlerts(options?)` | List your price alerts | API Key |
 | `createAlert(alert)` | Create a price alert | API Key |
 | `deleteAlert(alertId)` | Delete a price alert | API Key |
