@@ -68,6 +68,22 @@ export interface GetItemsV2Options {
   changes?: boolean;
 }
 
+export interface StickerListEntryV2 {
+  market_hash_name: string;
+  slug: string;
+  icon_url: string | null;
+  type: string | null;
+  effect: string | null;
+  liquidity: number | null;
+  quantity: number | null;
+  prices: Price[];
+}
+
+export interface GetStickersV2Options {
+  providers?: string;
+  market_hash_names?: string;
+}
+
 export interface InventoryProfile {
   steam64id: string;
   username: string;

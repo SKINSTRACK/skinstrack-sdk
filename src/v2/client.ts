@@ -8,6 +8,8 @@ import type {
   ItemDetailV2,
   ItemListEntryV2,
   GetItemsV2Options,
+  StickerListEntryV2,
+  GetStickersV2Options,
   InventoryResponse,
   GetInventoryOptions,
   AlertListResponse,
@@ -98,6 +100,21 @@ export class SkinstracksV2 {
       changes: options?.changes ? 'true' : undefined,
     });
     return this.http.get<ItemListEntryV2[]>(`/paid/items${queryString}`);
+  }
+
+  /**
+   * Get a list of stickers with their prices from specified providers.
+   * Supports filtering by provider and by market hash name / slug.
+   * Requires a paid plan API key.
+   */
+  async getStickers(
+    options?: GetStickersV2Options
+  ): Promise<StickerListEntryV2[]> {
+    const queryString = buildQueryString({
+      providers: options?.providers,
+      market_hash_names: options?.market_hash_names,
+    });
+    return this.http.get<StickerListEntryV2[]>(`/paid/stickers${queryString}`);
   }
 
   /**

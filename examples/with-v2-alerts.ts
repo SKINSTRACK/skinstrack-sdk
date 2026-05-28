@@ -105,6 +105,17 @@ async function main() {
       `  ${item.market_hash_name} - Avg: $${item.average?.['7d']}, Median: $${item.median?.['7d']}, 7d change: ${item.price_changes?.['7d']}%`
     );
   }
+
+  // Get V2 stickers list cap to 3 for brevity
+  console.log('\nFetching stickers list (V2)...');
+  const stickersList = await client.getStickers({
+    providers: 'csfloat,waxpeer',
+  });
+  for (const sticker of stickersList.slice(0, 3)) {
+    console.log(
+      `  ${sticker.market_hash_name} (${sticker.effect ?? 'no effect'}) - $${sticker.prices[0]?.price ?? 'N/A'} on ${sticker.prices[0]?.provider ?? 'N/A'}`
+    );
+  }
 }
 
 main().catch(console.error);

@@ -1,14 +1,29 @@
-# skinstrack
+# skinstrack - CS2 Skin Price API SDK for TypeScript & Node.js
 
-Official TypeScript SDK for the [skinstrack.com](https://skinstrack.com) CS2 Skins Price API.
+[![npm version](https://img.shields.io/npm/v/skinstrack.svg)](https://www.npmjs.com/package/skinstrack)
+[![npm downloads](https://img.shields.io/npm/dm/skinstrack.svg)](https://www.npmjs.com/package/skinstrack)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![TypeScript](https://img.shields.io/badge/TypeScript-Ready-blue.svg)](https://www.typescriptlang.org/)
+
+**Official TypeScript SDK for the [skinstrack.com](https://skinstrack.com) Counter-Strike 2 (CS2) Skins Price API** - the fastest way to fetch real-time CS2 skin prices, Steam market data, and cross-marketplace pricing from **CSFloat, Buff163, Waxpeer, Skinport, Steam, DMarket, MarketCSGO** and 20+ other CS2 marketplaces through a single REST API.
+
+Built for CS2 trading bots, price-tracking dashboards, Steam inventory valuation tools, and analytics platforms. Get aggregated CS2 skin prices, price history, trending items, price alerts, and Steam inventory value - all with full TypeScript typings and zero runtime dependencies.
+
+> **Why developers choose skinstrack:** 27+ marketplaces in one API, 10-minute price update cycle, 35M+ daily price updates, normalized & validated data, and pricing from just $24.99/month - significantly cheaper than competing CS2 price APIs. [See pricing](https://skinstrack.com/api-pricing)
 
 ## Features
 
-- Full TypeScript support with comprehensive type definitions
-- Support for both API v1 and v2
-- Works in Node.js, browsers, and edge runtimes
-- Zero runtime dependencies
-- Tree-shakeable exports
+- **CS2 skin price data** from 27+ marketplaces (CSFloat, Buff163, Waxpeer, Skinport, Steam Market, DMarket, MarketCSGO)
+- **Real-time updates** every 10 minutes - faster than competing CS2 price APIs
+- **Steam inventory valuation** - fetch any public Steam inventory and price it instantly
+- **Price alerts** with email, Discord, and Telegram notifications
+- **Trending CS2 items** - discover rising and falling skins by price movement
+- **Historical analytics** - average, median, and percentage price changes across multiple timeframes
+- **Sticker pricing** alongside weapon skin prices
+- Full **TypeScript** support with comprehensive type definitions
+- Supports both **API v1** (core pricing) and **API v2** (full trader toolkit)
+- Works in **Node.js**, **browsers**, **Deno**, and **edge runtimes** (Cloudflare Workers, Vercel Edge)
+- **Zero runtime dependencies** and tree-shakeable exports
 - Custom error classes for easy error handling
 
 ## Installation
@@ -94,6 +109,7 @@ interface ClientConfig {
 | `getSteamInventory(steamId, options?)` | Get Steam inventory with prices | Paid |
 | `getItem(itemName)` | Get detailed information and prices for a specific item |
 | `getItems(options?)` | Get a list of items with their prices from specified providers |
+| `getStickers(options?)` | Get a list of stickers with their prices from specified providers | Paid |
 | `getAlerts(options?)` | List your price alerts | API Key |
 | `createAlert(alert)` | Create a price alert | API Key |
 | `deleteAlert(alertId)` | Delete a price alert | API Key |
@@ -233,12 +249,44 @@ import type {
 } from 'skinstrack';
 ```
 
+## Use Cases
+
+The skinstrack SDK is commonly used to build:
+
+- **CS2 trading bots** that monitor cross-marketplace price arbitrage between CSFloat, Buff163, Waxpeer, and Skinport
+- **Steam inventory value calculators** - appraise any public Steam inventory in real time
+- **CS2 price tracker dashboards** with historical charts and trending skins
+- **Price alert services** notifying users on Discord, Telegram, or email when CS2 skins hit target prices
+- **Analytics platforms** for tracking skin price movements, liquidity, and market trends
+- **Discord bots** that lookup CS2 skin prices on demand
+- **Browser extensions** that overlay live prices on Steam market and third-party marketplaces
+- **Investment portfolios** for CS2 skin collectors and traders
+
+## FAQ
+
+**Is this an official Counter-Strike 2 SDK?**
+No - skinstrack is an independent CS2 skin pricing service. This SDK is the official TypeScript client for the skinstrack.com API. It is not affiliated with Valve Corporation, Steam, or Counter-Strike.
+
+**Which CS2 are supported?**
+27+ marketplaces including CSFloat, Buff163, Waxpeer, Skinport, Steam Community Market, DMarket, MarketCSGO, BitSkins, and more. See the [API documentation](https://skinstrack.com/api-docs) for the full list.
+
+**How often are CS2 skin prices updated?**
+Prices update every 10 minutes - significantly faster than most competing CS2 price APIs (which often update every 30–60 minutes).
+
+**Is there a free tier?**
+Yes - 50 API calls/month free. Paid plans start at $24.99/month. See [pricing](https://skinstrack.com/api-pricing).
+
 ## License
 
-MIT
+MIT - free for commercial and personal use.
 
 ## Links
 
-- [API Documentation](https://skinstrack.com/api-docs)
-- [Get API Key](https://skinstrack.com/api-pricing)
-- [GitHub Issues](https://github.com/skinstrack/skinstrack-sdk/issues)
+- [API Documentation](https://skinstrack.com/api-docs) - full endpoint reference for the CS2 skin price API
+- [Get an API Key](https://skinstrack.com/api-pricing) - free tier and paid plans
+- [GitHub Repository](https://github.com/skinstrack/skinstrack-sdk)
+- [Report an Issue](https://github.com/skinstrack/skinstrack-sdk/issues)
+
+---
+
+**Keywords:** CS2 skin price API, Counter-Strike 2 SDK, CS2 TypeScript SDK, Steam market price API, CSFloat API, Buff163 API, Waxpeer API, Skinport API, DMarket API, CS2 trading bot SDK, Steam inventory value API, CS2 price tracker, CS2 price alerts, CS2 skin marketplace API, Node.js CS2 SDK.

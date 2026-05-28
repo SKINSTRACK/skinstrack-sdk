@@ -8,6 +8,8 @@ export type {
   ItemDetailV2,
   ItemListEntryV2,
   GetItemsV2Options,
+  StickerListEntryV2,
+  GetStickersV2Options,
   InventoryProfile,
   InventorySummary,
   InventoryItemWithPrice,
